@@ -5,11 +5,12 @@ const { clientId, guildId, token } = require('./config.json');
 
 const commands = [
 	new SlashCommandBuilder().setName('spsol').setDescription('SP per SOL'),
+	new SlashCommandBuilder().setName('sphelp').setDescription('get infos on the SPSOL bot'),
 ]
 	.map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(token);
 
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
+rest.put(Routes.applicationCommands(clientId), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
