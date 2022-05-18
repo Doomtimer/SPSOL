@@ -1,0 +1,38 @@
+[
+  {
+    "power": 400,
+    "maxRange": 4
+  },
+  {
+    "power": 300,
+    "maxRange": 35
+  },
+  {
+    "power": 175,
+    "maxRange": 671
+  },
+  {
+    "power": 150,
+    "maxRange": 1671
+  },
+  {
+    "power": 90,
+    "maxRange": 2671
+  },
+  {
+    "power": 70,
+    "maxRange": 3671
+  },
+  {
+    "power": 60,
+    "maxRange": 4671
+  },
+  {
+    "power": 50,
+    "maxRange": 5671
+  },
+  {
+    "power": 40,
+    "maxRange": 6666
+  }
+]
