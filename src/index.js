@@ -61,13 +61,20 @@ client.on("interactionCreate", async (interaction) => {
         const minRange = i > 0 ? data[i - 1].maxRange + 1 : 0;
 
         const results = await getData({ ...item, minRange });
-
-        const marketLink = results.mintAddress;
-        const complMarketLink =
+          var marketLink = 'empty';
+          var complMarketLink = 'empty';
+          var price = 0;
+          var solRate = 0;
+          
+          if(results!=null)
+              {
+        marketLink = results.mintAddress;
+        complMarketLink =
           "https://magiceden.io/item-details/" + marketLink.toString();
-        const price = parseFloat(results.price);
+        price = parseFloat(results.price);
         console.log(item.power, price);
-        const solRate = Math.round((item.power / price) * 100) / 100;
+        solRate = Math.round((item.power / price) * 100) / 100;
+              }
 
         calcData.push({
           complMarketLink,
